@@ -1,0 +1,12 @@
+/.idea/
+
+.env
+*.key
+
+/log/
+/**/log/
+
+/data/**
+
+/__pycache__/
+/**/__pycache__/

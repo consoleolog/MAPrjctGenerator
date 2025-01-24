@@ -37,7 +37,7 @@ def _format_prompt(template: str, **kwargs):
 class LLMUtils:
     def __init__(self, model: BaseChatModel=None):
         if model is None:
-            raise ValueError("model cannot be None")
+            raise ValueError("prompts cannot be None")
         self.model = model
         self.logger = LoggerFactory().get_logger(__class__.__name__, "MindApply")
 

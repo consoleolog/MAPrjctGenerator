@@ -15,3 +15,5 @@ ipython~=8.30.0
 aiofiles
 langchain-ollama
 unstructured-pytesseract
+fastapi
+uvicorn[standard]

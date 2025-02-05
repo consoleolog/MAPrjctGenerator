@@ -25,12 +25,12 @@ def extract_values_from_list(data):
             values.extend(extract_values_from_list(item))
     return values
 
-def save_data(data: Any, label:int, file_path = ""):
-    if type(data) == str:
-        data.replace(",", "")
+def save_data(data: Any, label: int, file_path=""):
+    if isinstance(data, str):
+        data = data.replace(",", " ")
     else:
-        data = str(data)
-        data = data.replace(",", "")
+        data = str(data).replace(",", " ")
+
     with open(file_path, "a", encoding="utf-8") as f:
         f.write(f"\n{data},{label}")
 

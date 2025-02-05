@@ -1,10 +1,12 @@
 import os
 
-from app_factory import AppFactory
+from ioc_container import IocContainer
 from logger import LoggerFactory
+from service.data_service import DataService
 
-app_factory = AppFactory()
-data_service = app_factory.data_service
+container = IocContainer()
+container.compose()
+data_service = container.get(DataService)
 
 data_dir = os.getcwd() + "/data"
 
